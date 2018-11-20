@@ -26,7 +26,7 @@ function zed(filepath, options, callback){
         //---> actual parsing --->
         var obj;
         var stack = [];
-        var regex =/\s?[a-z]*\d?:|;/gm
+        var regex =/\s?[a-z]*\d?:|;$/gm
         while((obj = regex.exec(data))){
             if(obj[0].trim() != ';'){
                 console.log('search', obj[0])
